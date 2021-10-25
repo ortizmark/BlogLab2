@@ -101,11 +101,6 @@ namespace BlogLab.Identity
             return Task.FromResult(0);
         }
 
-
-
-
-
-
         public Task<IdentityResult> DeleteAsync(ApplicationUserIdentity user, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
