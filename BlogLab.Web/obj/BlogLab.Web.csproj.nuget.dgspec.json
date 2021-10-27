@@ -4,6 +4,78 @@
     "C:\\Angular_Blog\\BlogLab\\BlogLab.Web\\BlogLab.Web.csproj": {}
   },
   "projects": {
+    "C:\\Angular_Blog\\BlogLab\\BlogLab.Identity\\BlogLab.Identity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Angular_Blog\\BlogLab\\BlogLab.Identity\\BlogLab.Identity.csproj",
+        "projectName": "BlogLab.Identity",
+        "projectPath": "C:\\Angular_Blog\\BlogLab\\BlogLab.Identity\\BlogLab.Identity.csproj",
+        "packagesPath": "C:\\Users\\Mark\\.nuget\\packages\\",
+        "outputPath": "C:\\Angular_Blog\\BlogLab\\BlogLab.Identity\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Mark\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Angular_Blog\\BlogLab\\BlogLab.Models\\BlogLab.Models.csproj": {
+                "projectPath": "C:\\Angular_Blog\\BlogLab\\BlogLab.Models\\BlogLab.Models.csproj"
+              },
+              "C:\\Angular_Blog\\BlogLab\\BlogLab.Repository\\BlogLab.Repository.csproj": {
+                "projectPath": "C:\\Angular_Blog\\BlogLab\\BlogLab.Repository\\BlogLab.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Angular_Blog\\BlogLab\\BlogLab.Models\\BlogLab.Models.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -69,14 +141,14 @@
         }
       }
     },
-    "C:\\Angular_Blog\\BlogLab\\BlogLab.Web\\BlogLab.Web.csproj": {
+    "C:\\Angular_Blog\\BlogLab\\BlogLab.Repository\\BlogLab.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Angular_Blog\\BlogLab\\BlogLab.Web\\BlogLab.Web.csproj",
-        "projectName": "BlogLab.Web",
-        "projectPath": "C:\\Angular_Blog\\BlogLab\\BlogLab.Web\\BlogLab.Web.csproj",
+        "projectUniqueName": "C:\\Angular_Blog\\BlogLab\\BlogLab.Repository\\BlogLab.Repository.csproj",
+        "projectName": "BlogLab.Repository",
+        "projectPath": "C:\\Angular_Blog\\BlogLab\\BlogLab.Repository\\BlogLab.Repository.csproj",
         "packagesPath": "C:\\Users\\Mark\\.nuget\\packages\\",
-        "outputPath": "C:\\Angular_Blog\\BlogLab\\BlogLab.Web\\obj\\",
+        "outputPath": "C:\\Angular_Blog\\BlogLab\\BlogLab.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
@@ -114,6 +186,181 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.90, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Angular_Blog\\BlogLab\\BlogLab.Services\\BlogLab.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Angular_Blog\\BlogLab\\BlogLab.Services\\BlogLab.Services.csproj",
+        "projectName": "BlogLab.Services",
+        "projectPath": "C:\\Angular_Blog\\BlogLab\\BlogLab.Services\\BlogLab.Services.csproj",
+        "packagesPath": "C:\\Users\\Mark\\.nuget\\packages\\",
+        "outputPath": "C:\\Angular_Blog\\BlogLab\\BlogLab.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Mark\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Angular_Blog\\BlogLab\\BlogLab.Models\\BlogLab.Models.csproj": {
+                "projectPath": "C:\\Angular_Blog\\BlogLab\\BlogLab.Models\\BlogLab.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "CloudinaryDotNet": {
+              "target": "Package",
+              "version": "[1.15.2, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.13.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.13.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Angular_Blog\\BlogLab\\BlogLab.Web\\BlogLab.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Angular_Blog\\BlogLab\\BlogLab.Web\\BlogLab.Web.csproj",
+        "projectName": "BlogLab.Web",
+        "projectPath": "C:\\Angular_Blog\\BlogLab\\BlogLab.Web\\BlogLab.Web.csproj",
+        "packagesPath": "C:\\Users\\Mark\\.nuget\\packages\\",
+        "outputPath": "C:\\Angular_Blog\\BlogLab\\BlogLab.Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Mark\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Angular_Blog\\BlogLab\\BlogLab.Identity\\BlogLab.Identity.csproj": {
+                "projectPath": "C:\\Angular_Blog\\BlogLab\\BlogLab.Identity\\BlogLab.Identity.csproj"
+              },
+              "C:\\Angular_Blog\\BlogLab\\BlogLab.Models\\BlogLab.Models.csproj": {
+                "projectPath": "C:\\Angular_Blog\\BlogLab\\BlogLab.Models\\BlogLab.Models.csproj"
+              },
+              "C:\\Angular_Blog\\BlogLab\\BlogLab.Repository\\BlogLab.Repository.csproj": {
+                "projectPath": "C:\\Angular_Blog\\BlogLab\\BlogLab.Repository\\BlogLab.Repository.csproj"
+              },
+              "C:\\Angular_Blog\\BlogLab\\BlogLab.Services\\BlogLab.Services.csproj": {
+                "projectPath": "C:\\Angular_Blog\\BlogLab\\BlogLab.Services\\BlogLab.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
