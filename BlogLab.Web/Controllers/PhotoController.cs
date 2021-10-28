@@ -87,7 +87,7 @@ namespace BlogLab.Web.Controllers
                     return BadRequest("Photo was not uploaded by the current user");
                 }
             }
-            return BadRequest("Photo does not exist")
+            return BadRequest("Photo does not exist");
 
         }
 
