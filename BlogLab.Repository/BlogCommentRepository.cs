@@ -53,8 +53,12 @@ namespace BlogLab.Repository
             {
                 await connection.OpenAsync();
 
-                blogComment = await connection.QueryFirstOrDefaultAsync<BlogComment>("BlogComment_Get", new { BlogCommentId = blogCommentId }, commandType: CommandType.StoredProcedure);
+                blogComment = await connection.QueryFirstOrDefaultAsync<BlogComment>(
+                    "BlogComment_Get",
+                    new { BlogCommentId = blogCommentId },
+                    commandType: CommandType.StoredProcedure);
             }
+
             return blogComment;
         }
 
@@ -77,14 +81,17 @@ namespace BlogLab.Repository
             using (var connection = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
             {
                 await connection.OpenAsync();
-                newBlogCommentId = await connection.ExecuteScalarAsync<int?>("BlogComment_Upsert",
+
+                newBlogCommentId = await connection.ExecuteScalarAsync<int?>(
+                    "BlogComment_Upsert",
                     new
                     {
                         BlogComment = dataTable.AsTableValuedParameter("dbo.BlogCommentType"),
-                        ApplicationId = applicationUserId
+                        ApplicationUserId = applicationUserId
                     },
                     commandType: CommandType.StoredProcedure);
             }
+
             newBlogCommentId = newBlogCommentId ?? blogCommentCreate.BlogCommentId;
 
             BlogComment blogComment = await GetAsync(newBlogCommentId.Value);

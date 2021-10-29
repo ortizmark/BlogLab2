@@ -33,7 +33,7 @@ namespace BlogLab.Services
                 _issuer,
                 _issuer,
                 claims,
-                expires: DateTime.Now.AddMinutes(30),
+                expires: DateTime.Now.AddMinutes(300),
                 signingCredentials: creds
             );
             return new JwtSecurityTokenHandler().WriteToken(token);
