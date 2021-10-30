@@ -27,8 +27,12 @@ namespace BlogLab.Repository
             {
                 await connection.OpenAsync();
 
-                affectedRows = await connection.ExecuteAsync("BlogComment_Delete", new { BlogCommentId = blogCommentId }, commandType: CommandType.StoredProcedure);
+                affectedRows = await connection.ExecuteAsync(
+                    "BlogComment_Delete",
+                    new { BlogCommentId = blogCommentId },
+                    commandType: CommandType.StoredProcedure);
             }
+
             return affectedRows;
         }
 
