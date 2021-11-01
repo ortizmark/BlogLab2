@@ -50,6 +50,13 @@ namespace BlogLab.Web.Controllers
             return Ok(blogs);
         }
 
+        [HttpGet("{blogId}")]
+        public async Task<ActionResult<Blog>> Get(int blogId)
+        {
+            var blog = await _blogRepository.GetAsync(blogId);
+            return Ok(blog);
+        }
+
         //http://localhost:5000/api/Blog/user/12
         [HttpGet("user/{applicationUserId}")]
         public async Task<ActionResult<List<Blog>>> GetByApplicationUserId(int applicationUserId)
