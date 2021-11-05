@@ -11,7 +11,7 @@ import { BlogComponent } from './components/blog-components/blog/blog.component'
 import { BlogCardComponent } from './components/blog-components/blog-card/blog-card.component';
 import { BlogEditComponent } from './components/blog-components/blog-edit/blog-edit.component';
 import { BlogsComponent } from './components/blog-components/blogs/blogs.component';
-import { FamoutBlogsComponent } from './components/blog-components/famout-blogs/famout-blogs.component';
+import { FamousBlogsComponent } from './components/blog-components/famous-blogs/famous-blogs.component';
 import { CommentBoxComponent } from './components/comment-components/comment-box/comment-box.component';
 import { CommentSystemComponent } from './components/comment-components/comment-system/comment-system.component';
 import { CommentsComponent } from './components/comment-components/comments/comments.component';
@@ -36,7 +36,7 @@ import { ErrorInterceptor } from './interceptors/error.interceptor';
     BlogCardComponent,
     BlogEditComponent,
     BlogsComponent,
-    FamoutBlogsComponent,
+    FamousBlogsComponent,
     CommentBoxComponent,
     CommentSystemComponent,
     CommentsComponent,
