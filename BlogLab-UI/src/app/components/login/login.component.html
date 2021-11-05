@@ -1,1 +1,13 @@
-<p>login works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 mt-5">
+            <h3 class="text-dark">Login</h3>
+            <p class="text-dark">Get to your dashboard and start blogging</p>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <input type="text" [ngClass]= "{'is-invalid' : hasErrors('username') && isTouched('username')}">
+                 </div>
+            </form>
+        </div>
+    </div>
+</div>

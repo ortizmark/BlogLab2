@@ -4,6 +4,7 @@ import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common
 import { ToastrModule } from 'ngx-toastr';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { SummaryPipe } from './pipes/summary.pipe';
 import { BlogComponent } from './components/blog-components/blog/blog.component';
@@ -52,6 +53,8 @@ import { ErrorInterceptor } from './interceptors/error.interceptor';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right'
