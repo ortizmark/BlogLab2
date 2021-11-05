@@ -9,7 +9,7 @@ export class SummaryPipe implements PipeTransform {
     if (content.length <= characterLimit) {
       return content;
     } else {
-      return content.substring(0,characterLimit) + '...';
+      return content.substring(0, characterLimit) + '...';
     }
   }
 

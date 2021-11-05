@@ -10,13 +10,13 @@ import { AccountService } from 'src/app/services/account.service';
 export class NavbarComponent implements OnInit {
 
   isCollapsed = true;
-  
+
   constructor( public accountService: AccountService, private router: Router ) { }
 
   ngOnInit(): void {
   }
 
-  logout(){
+  logout(): void{
     this.accountService.logout();
     this.router.navigate(['/']);
   }
