@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { Blog } from 'src/app/models/blog/blog.model';
+import { AccountService } from 'src/app/services/account.service';
+import { BlogService } from 'src/app/services/blog.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +12,54 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  userBlogs: Blog[];
+
+  constructor(
+    private blogService: BlogService,
+    private router: Router,
+    private toastr: ToastrService,
+    private accountService: AccountService
+  ) { }
 
   ngOnInit(): void {
+    this.userBlogs = [];
+    let currentApplicationUserid = this.accountService.currentUserValue.applicationUserId;
+    this.blogService.getByApplicationUserId(currentApplicationUserid).subscribe(userBlogs => {
+      this.userBlogs = userBlogs;
+    });
+  }
+
+  confirmDelete(blog: Blog) {
+    blog.deleteConfirm = true;
+  }
+
+  cancelDeleteConfirm(blog: Blog) {
+    blog.deleteConfirm = false;
+  }
+
+  deleteConfirmed(blog: Blog, blogs: Blog[]) {
+    this.blogService.delete(blog.blogId).subscribe(() => {
+      let index = 0;
+      for (let i = 0; i < blogs.length; i++) {
+        if (blogs[i].blogId === blog.blogId) {
+          index = i;
+        }
+      }
+
+      if (index > -1){
+        blogs.splice(index, 1);
+      }
+
+      this.toastr.info('Blog deleted.');
+    });
+  }
+
+  ediitBlog(blogId: number) {
+    this.router.navigate(['/dashboard/' + blogId.toString()]);
+  }
+
+  createBlog() {
+    this.router.navigate(['/dashboard/-1']);
   }
 
 }
